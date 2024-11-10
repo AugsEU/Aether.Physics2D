@@ -455,13 +455,14 @@ namespace nkast.Aether.Physics2D.Collision
             return true;
         }
 
-        /// <summary>
-        /// Raycast against this AABB using the specificed points and maxfraction (found in input)
-        /// </summary>
-        /// <param name="output">The results of the raycast.</param>
-        /// <param name="input">The parameters for the raycast.</param>
-        /// <returns>True if the ray intersects the AABB</returns>
-        public bool RayCast(out RayCastOutput output, ref RayCastInput input, bool doInteriorCheck = true)
+		/// <summary>
+		/// Raycast against this AABB using the specificed points and maxfraction (found in input)
+		/// </summary>
+		/// <param name="output">The results of the raycast.</param>
+		/// <param name="input">The parameters for the raycast.</param>
+		/// <param name="doInteriorCheck">Check if ray starts inside the box.</param>
+		/// <returns>True if the ray intersects the AABB</returns>
+		public bool RayCast(out RayCastOutput output, ref RayCastInput input, bool doInteriorCheck = true)
         {
             // From Real-time Collision Detection, p179.
 
@@ -1686,16 +1687,15 @@ namespace nkast.Aether.Physics2D.Collision
             return numOut;
         }
 
-        /// <summary>
-        /// Find the separation between poly1 and poly2 for a give edge normal on poly1.
-        /// </summary>
-        /// <param name="poly1">The poly1.</param>
-        /// <param name="xf1">The XF1.</param>
-        /// <param name="edge1">The edge1.</param>
-        /// <param name="poly2">The poly2.</param>
-        /// <param name="xf2">The XF2.</param>
-        /// <returns></returns>
-        private static float EdgeSeparation(PolygonShape poly1, ref Transform xf1To2, int edge1, PolygonShape poly2)
+		/// <summary>
+		/// Find the separation between poly1 and poly2 for a give edge normal on poly1.
+		/// </summary>
+		/// <param name="poly1">The poly1.</param>
+		/// <param name="xf1To2">The XF1 to XF2 transform.</param>
+		/// <param name="edge1">The edge1.</param>
+		/// <param name="poly2">The poly2.</param>
+		/// <returns></returns>
+		private static float EdgeSeparation(PolygonShape poly1, ref Transform xf1To2, int edge1, PolygonShape poly2)
         {
             List<Vector2> vertices1 = poly1.Vertices;
             List<Vector2> normals1 = poly1.Normals;

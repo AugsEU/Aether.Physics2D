@@ -745,7 +745,6 @@ namespace nkast.Aether.Physics2D.Dynamics
         /// <summary>
         /// Get the body transform for the body's origin.
         /// </summary>
-        /// <param name="transform">The transform of the body's origin.</param>
         public Transform GetTransform()
         {
             return _xf;

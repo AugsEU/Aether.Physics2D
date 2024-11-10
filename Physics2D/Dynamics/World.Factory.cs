@@ -189,7 +189,6 @@ namespace nkast.Aether.Physics2D.Dynamics
         /// <summary>
         /// Creates a chain.
         /// </summary>
-        /// <param name="world">The world.</param>
         /// <param name="start">The start.</param>
         /// <param name="end">The end.</param>
         /// <param name="linkWidth">The width.</param>

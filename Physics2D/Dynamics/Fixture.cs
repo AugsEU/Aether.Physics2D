@@ -365,14 +365,15 @@ namespace nkast.Aether.Physics2D.Dynamics
         {
             return CloneOnto(body, this.Shape);
         }
-        
-        /// <summary>
-        /// Clones the fixture and attached shape onto the specified body.
-        /// Note: This is used only by Deserialization.
-        /// </summary>
-        /// <param name="body">The body you wish to clone the fixture onto.</param>
-        /// <returns>The cloned fixture.</returns>
-        internal Fixture CloneOnto(Body body, Shape shape)
+
+		/// <summary>
+		/// Clones the fixture and attached shape onto the specified body.
+		/// Note: This is used only by Deserialization.
+		/// </summary>
+		/// <param name="body">The body you wish to clone the fixture onto.</param>
+		/// <param name="shape">The specified body.</param>
+		/// <returns>The cloned fixture.</returns>
+		internal Fixture CloneOnto(Body body, Shape shape)
         {
             Fixture fixture = new Fixture(shape.Clone());
             fixture.Tag = Tag;

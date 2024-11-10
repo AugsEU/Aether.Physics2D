@@ -34,13 +34,14 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/**
+/*
  * Forces a triangle edge between two points p and q
  * when triangulating. For example used to enforce
  * Polygon Edges during a polygon triangulation.
  * 
  * @author Thomas Åhlén, thahlen@gmail.com
  */
+
 namespace nkast.Aether.Physics2D.Common.Decomposition.CDT
 {
     internal class TriangulationConstraint

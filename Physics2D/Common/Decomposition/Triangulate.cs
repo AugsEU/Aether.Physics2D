@@ -74,12 +74,19 @@ namespace nkast.Aether.Physics2D.Common.Decomposition
 
     public static class Triangulate
     {
-        /// <param name="skipSanityChecks">
-        /// Set this to true to skip sanity checks in the engine. This will speed up the
-        /// tools by removing the overhead of the checks, but you will need to handle checks
-        /// yourself where it is needed.
-        /// </param>
-        public static List<Vertices> ConvexPartition(Vertices vertices, TriangulationAlgorithm algorithm, bool discardAndFixInvalid = true, float tolerance = 0.001f, bool skipSanityChecks = false)
+		/// <param name="vertices"> Verts to triangulate </param>
+		/// <param name="algorithm"> Type of algorithm to triangulate </param>
+		/// <param name="discardAndFixInvalid">
+		/// If true we scan through results and verify if the triangles are valid.
+		/// Any invalid triangle is removed from the output.
+		/// </param>
+		/// <param name="skipSanityChecks">
+		/// <param name="tolerance"> Tolerance for duplicate verts </param>
+		/// Set this to true to skip sanity checks in the engine. This will speed up the
+		/// tools by removing the overhead of the checks, but you will need to handle checks
+		/// yourself where it is needed.
+		/// </param>
+		public static List<Vertices> ConvexPartition(Vertices vertices, TriangulationAlgorithm algorithm, bool discardAndFixInvalid = true, float tolerance = 0.001f, bool skipSanityChecks = false)
         {
             if (vertices.Count <= 3)
                 return new List<Vertices> { vertices };

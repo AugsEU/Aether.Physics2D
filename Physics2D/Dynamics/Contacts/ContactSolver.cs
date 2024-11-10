@@ -592,10 +592,12 @@ namespace nkast.Aether.Physics2D.Dynamics.Contacts
                     // Compute b'
                     b -= MathUtils.Mul(ref vc.K, ref a);
 
-                    const float k_errorTol = 1e-3f;
-                    //B2_NOT_USED(k_errorTol);
+#pragma warning disable CS0219 // Variable is assigned but its value is never used
+					const float k_errorTol = 1e-3f;
+#pragma warning restore CS0219 // Variable is assigned but its value is never used
+							  //B2_NOT_USED(k_errorTol);
 
-                    for (; ; )
+					for (; ; )
                     {
                         //
                         // Case 1: vn = 0

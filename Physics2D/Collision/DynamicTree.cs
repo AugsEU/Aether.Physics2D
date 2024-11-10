@@ -199,7 +199,6 @@ namespace nkast.Aether.Physics2D.Collision
         /// the node pool.        
         /// /// </summary>
         /// <param name="aabb">The aabb.</param>
-        /// <param name="userData">The user data.</param>
         /// <returns>Index of the created proxy</returns>
         public int AddProxy(ref AABB aabb)
         {
@@ -287,7 +286,6 @@ namespace nkast.Aether.Physics2D.Collision
         /// <summary>
         /// Set proxy user data.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="proxyId">The proxy id.</param>
         /// <param name="userData">The proxy user data.</param>
         public void SetUserData(int proxyId, TNode userData)
@@ -298,7 +296,6 @@ namespace nkast.Aether.Physics2D.Collision
         /// <summary>
         /// Get proxy user data.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="proxyId">The proxy id.</param>
         /// <returns>the proxy user data or 0 if the id is invalid.</returns>
         public TNode GetUserData(int proxyId)

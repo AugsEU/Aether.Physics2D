@@ -56,11 +56,11 @@ namespace nkast.Aether.Physics2D.Common.PhysicsLogic
             this.ControllerCategories = controllerCategory;
         }
 
-        /// <summary>
-        /// Ignores the controller. The controller has no effect on this body.
-        /// </summary>
-        /// <param name="type">The logic type.</param>
-        public void IgnoreController(ControllerCategory category)
+		/// <summary>
+		/// Ignores the controller. The controller has no effect on this body.
+		/// </summary>
+		/// <param name="category">Category to ignore.</param>
+		public void IgnoreController(ControllerCategory category)
         {
             ControllerCategories &= ~category;
         }

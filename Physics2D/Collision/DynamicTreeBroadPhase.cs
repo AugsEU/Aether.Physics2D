@@ -124,13 +124,13 @@ namespace nkast.Aether.Physics2D.Collision
             get { return _proxyCount; }
         }
 
-        /// <summary>
-        /// Create a proxy with an initial AABB. Pairs are not reported until
-        /// UpdatePairs is called.
-        /// </summary>
-        /// <param name="proxy">The user data.</param>
-        /// <returns></returns>
-        public int AddProxy(ref AABB aabb)
+		/// <summary>
+		/// Create a proxy with an initial AABB. Pairs are not reported until
+		/// UpdatePairs is called.
+		/// </summary>
+		/// <param name="aabb">Initial AABB for proxy.</param>
+		/// <returns></returns>
+		public int AddProxy(ref AABB aabb)
         {
             int proxyId = _tree.AddProxy(ref aabb);
             ++_proxyCount;

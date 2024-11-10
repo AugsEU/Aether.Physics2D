@@ -19,8 +19,6 @@
     <AssemblyName>Aether.Physics2D</AssemblyName>
 
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <OutputPath>..\bin\$(Configuration)\MG\</OutputPath>
-    <BaseIntermediateOutputPath>obj\$(Configuration)\MG\</BaseIntermediateOutputPath>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DefineConstants>LEGACY_ASYNCADDREMOVE;XNAAPI</DefineConstants>
   </PropertyGroup>
@@ -170,5 +168,9 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
+
+  <PropertyGroup>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
 
 </Project>

@@ -1,0 +1,11 @@
+/bin/
+/obj/
+/Physics2D/bin/
+/Physics2D/obj/
+/Physics2D/.vs/
+/Physics2D.Content/bin/
+/Physics2D.Content/obj/
+/Physics2D.Diagnostics/Diagnostics/bin/
+/Physics2D.Diagnostics/Diagnostics/obj/
+
+/.vs/

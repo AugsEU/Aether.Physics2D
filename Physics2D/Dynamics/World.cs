@@ -1352,12 +1352,13 @@ namespace nkast.Aether.Physics2D.Dynamics
             Step((float)dt.TotalSeconds);
         }
 
-        /// <summary>
-        /// Take a time step. This performs collision detection, integration,
-        /// and consraint solution.
-        /// </summary>
-        /// <param name="dt">The amount of time to simulate, this should not vary.</param>
-        public void Step(TimeSpan dt, ref SolverIterations iterations)
+		/// <summary>
+		/// Take a time step. This performs collision detection, integration,
+		/// and consraint solution.
+		/// </summary>
+		/// <param name="dt">The amount of time to simulate, this should not vary.</param>
+		/// <param name="iterations">Number of iterations for solver parts.</param>
+		public void Step(TimeSpan dt, ref SolverIterations iterations)
         {
             Step((float)dt.TotalSeconds, ref iterations);
         }

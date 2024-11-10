@@ -25,7 +25,6 @@ namespace nkast.Aether.Physics2D.Dynamics
         /// Warning: This method is locked during callbacks.
         /// </summary>
         /// <param name="shape">The shape.</param>
-        /// <param name="userData">Application specific data</param>
         /// <returns></returns>
         public virtual Fixture CreateFixture(Shape shape)
         {
